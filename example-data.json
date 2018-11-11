@@ -1,0 +1,20 @@
+{
+    "data": {
+        "type": "users",
+        "id": "1",
+        "attributes": {
+            "first_name": "Matt",
+            "last_name": "Weber",
+            "email": "matt@feldmanweber.com",
+            "location": "Kenai, AK",
+            "date_joined": "11-02-2018",
+            "favorite_activities": ["Hunting", "Hiking", "Fishing"],
+            "bio": "Husband | Software Engineer | Serial Entrepreneur",
+            "photo_url": "https://s3.amazonaws.com/bucketname/imagename.jpg",
+            "pro": "true"
+        },
+        "relationships": {
+            // ... this article's relationships
+        }
+    }
+}
