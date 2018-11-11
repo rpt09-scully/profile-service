@@ -14,7 +14,7 @@
             "pro": "true"
         },
         "relationships": {
-            // ... this article's relationships
+            // If needed, followers, followed, completions, etc. 
         }
     }
 }
