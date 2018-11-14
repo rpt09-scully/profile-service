@@ -7,14 +7,11 @@
             "last_name": "Weber",
             "email": "matt@feldmanweber.com",
             "location": "Kenai, AK",
-            "date_joined": "11-02-2018",
+            "date_joined": "2018-03-19",
             "favorite_activities": ["Hunting", "Hiking", "Fishing"],
             "bio": "Husband | Software Engineer | Serial Entrepreneur",
             "photo_url": "https://s3.amazonaws.com/bucketname/imagename.jpg",
-            "pro": "true"
+            "pro": true
         },
-        "relationships": {
-            // If needed, followers, followed, completions, etc. 
-        }
     }
 }
