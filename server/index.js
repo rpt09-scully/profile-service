@@ -1,5 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const db = require('../database-mysql');
+
 
 const app = express();
 const PORT = 3002;
@@ -9,7 +11,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static(__dirname + '/../client/dist'));
 
-
+app.get('/user/:id', function (req, res) {
+  res.send('test');
+});
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);

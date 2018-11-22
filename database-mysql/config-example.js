@@ -3,5 +3,5 @@ module.exports = {
 
   password: 'YOUR_PASSWORD_HERE', 
 
-  database: 'minteger'
+  database: 'profiles_db'
 };
