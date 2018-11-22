@@ -13,8 +13,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'));
 
 app.get('/user/:id', function (req, res) {
-  const test = db.getUser(req.params.id);
-  res.send(exampleData);
+  db.getUser(req.params.id)
+  .then((userData) => {
+    res.send(userData);
+  });
 });
 
 app.listen(PORT, () => {
