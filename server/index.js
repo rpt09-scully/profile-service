@@ -15,6 +15,7 @@ app.use(express.static(__dirname + '/../client/dist'));
 app.get('/user/:id', function (req, res) {
   db.getUser(req.params.id)
   .then((userData) => {
+    // NEED TO FORMAT THIS DATA FIRST
     res.send(userData);
   });
 });
