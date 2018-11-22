@@ -13,6 +13,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'));
 
 app.get('/user/:id', function (req, res) {
+  const test = db.getAllUsers();
+  console.log(test);
   res.send(exampleData);
 });
 
