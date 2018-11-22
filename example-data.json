@@ -10,7 +10,7 @@
             "date_joined": "2018-03-19",
             "favorite_activities": ["Hunting", "Hiking", "Fishing"],
             "bio": "Husband | Software Engineer | Serial Entrepreneur",
-            "photo_url": "https://s3.amazonaws.com/bucketname/imagename.jpg",
+            "photo_url": "https://learnetto-blog.s3.amazonaws.com/blog/2016-03-22/1458676053435-samirtalwar.jpg",
             "pro": true
         }
     }
