@@ -1,6 +1,6 @@
 # Profile Service
 
-> Profile Service for 9 Trails
+Profile Service for 9 Trails
 
 ## Related Projects
 
@@ -18,9 +18,11 @@
 
 ## Usage
 
-> Some usage instructions
+> Coming Soon
 
 ## Requirements
+
+> Coming Soon
 
 ## Development
 
@@ -38,11 +40,15 @@ To set up:
   $> mysql -u root -p < schema.sql  
   ```
 
-  Inside `config.s` place your SQL credentials (change if needed)
+  Inside `config.js` place your SQL credentials (change if needed)
   ``` 
-  DB_HOST=localhost
-  DB_USER=root
-  DB_PASS=
+  module.exports = {
+    user: 'root', 
+
+    password: 'example', 
+
+    database: 'profiles_db'
+  };
   ```
 
   To execute:
@@ -53,5 +59,5 @@ To set up:
 
 ### Installing Dependencies
 
-
+> Coming Soon
 
