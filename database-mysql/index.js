@@ -10,11 +10,20 @@ const getUser = (id) => {
       resolve(rows);
     })
   });
+};
 
+const getUserActivities = (id) => {
+  return new Promise((resolve, reject) => {
+    connection.query(`SELECT * FROM prof_act WHERE prof_id = ${id}`, function (err, rows, fields) {
+      if (err) throw err
+      console.log(rows);
+    })
+  });
 };
 
 module.exports = {
   connection,
-  getUser
+  getUser,
+  getUserActivities
 };
 

@@ -24,14 +24,13 @@ CREATE TABLE `activities` (
 );
 
 CREATE TABLE `prof_act` (
-	`act_id` int NOT NULL,
-	`prof_id` int NOT NULL
+  `act_id` int(11) NOT NULL,
+  `prof_id` int(11) NOT NULL,
+  KEY `prof_act_fk0` (`act_id`),
+  KEY `prof_act_fk1` (`prof_id`),
+  CONSTRAINT `prof_act_fk0` FOREIGN KEY (`act_id`) REFERENCES `activities` (`act_id`),
+  CONSTRAINT `prof_act_fk1` FOREIGN KEY (`prof_id`) REFERENCES `profiles` (`prof_id`)
 );
-
-ALTER TABLE `prof_act` ADD CONSTRAINT `prof_act_fk0` FOREIGN KEY (`act_id`) REFERENCES `activities`(`act_id`);
-
-ALTER TABLE `prof_act` ADD CONSTRAINT `prof_act_fk1` FOREIGN KEY (`prof_id`) REFERENCES `profiles`(`prof_id`);
-
 
 INSERT INTO `activities` (`act_id`, `act_name`) VALUES (1, 'vel');
 INSERT INTO `activities` (`act_id`, `act_name`) VALUES (2, 'in');
@@ -236,6 +235,107 @@ INSERT INTO `profiles` (`prof_id`, `first_name`, `last_name`, `email`, `location
 INSERT INTO `profiles` (`prof_id`, `first_name`, `last_name`, `email`, `location`, `date_joined`, `bio`, `photo_url`, `pro`) VALUES (99, 'Sabrina', 'Romaguera', 'qflatley@example.net', 'North Hector, RI', '1986-10-02', 'Non a et quia neque et porro adipisci. Ut adipisci dolores id corporis est perferendis.', 'http://lorempixel.com/640/480/', 0);
 INSERT INTO `profiles` (`prof_id`, `first_name`, `last_name`, `email`, `location`, `date_joined`, `bio`, `photo_url`, `pro`) VALUES (100, 'Werner', 'Toy', 'bstroman@example.net', 'Lillaville, AK', '1999-06-24', 'Facilis qui autem unde nihil aut rem. Incidunt quibusdam molestiae optio sit. Aliquid nesciunt sapiente qui necessitatibus porro. Reiciendis asperiores voluptatem est ducimus.', 'http://lorempixel.com/640/480/', 1);
 
+
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (76, 98);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (73, 62);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (21, 37);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (42, 69);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (20, 64);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (34, 26);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (21, 78);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (11, 38);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (56, 28);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (7, 100);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (93, 63);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (53, 2);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (38, 69);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (17, 40);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (47, 6);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (8, 14);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (67, 2);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (52, 48);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (12, 54);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (38, 31);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (97, 26);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (56, 91);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (80, 27);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (80, 26);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (15, 17);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (20, 68);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (80, 2);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (73, 94);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (2, 91);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (71, 75);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (73, 37);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (55, 34);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (11, 93);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (16, 92);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (25, 27);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (77, 77);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (100, 59);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (24, 7);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (31, 68);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (97, 85);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (40, 17);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (63, 56);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (25, 47);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (97, 22);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (6, 6);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (79, 40);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (36, 2);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (78, 9);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (13, 27);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (57, 58);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (34, 16);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (19, 95);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (59, 46);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (10, 30);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (17, 19);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (13, 36);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (19, 98);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (99, 30);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (93, 90);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (28, 90);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (14, 34);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (84, 41);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (80, 38);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (48, 56);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (70, 24);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (44, 68);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (41, 95);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (45, 83);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (34, 56);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (21, 19);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (77, 86);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (9, 35);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (59, 34);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (50, 3);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (51, 41);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (95, 16);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (17, 57);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (47, 69);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (7, 32);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (81, 17);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (96, 22);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (65, 46);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (16, 57);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (4, 18);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (1, 31);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (7, 45);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (45, 87);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (56, 60);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (40, 47);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (86, 35);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (67, 88);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (3, 36);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (11, 72);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (36, 72);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (100, 95);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (9, 87);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (58, 38);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (53, 42);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (3, 33);
+INSERT INTO `prof_act` (`act_id`, `prof_id`) VALUES (90, 18);
 /*  Execute this file from the command line by typing:
  *    mysql -u <USER> < schema.sql
  *    OR
