@@ -14,12 +14,13 @@ const getUser = (id) => {
 
 const getUserActivities = (id) => {
   return new Promise((resolve, reject) => {
-    connection.query(`SELECT * FROM prof_act WHERE prof_id = ${id}`, function (err, rows, fields) {
+    connection.query(`SELECT act_name FROM prof_act INNER JOIN activities ON activities.act_id = prof_act.act_id WHERE prof_id = ${id}`, function (err, rows, fields) {
       if (err) throw err
-      console.log(rows);
+      resolve(rows);
     })
   });
 };
+
 
 module.exports = {
   connection,

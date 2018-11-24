@@ -13,6 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'));
 
 app.get('/user/:id', function (req, res) {
+  let finalData;
   db.getUser(req.params.id)
   .then((rawUserData) => {
     const rawData = rawUserData[0];
@@ -26,18 +27,32 @@ app.get('/user/:id', function (req, res) {
           "email": rawData.email,
           "location": rawData.location,
           "date_joined": rawData.date_joined.toJSON().substring(0,10),
-          "favorite_activities": db.getUserActivities(rawData.prof_id), // Need to pull real data
+          "favorite_activities": [], // Need to pull real data
           "bio": rawData.bio,
           "photo_url": rawData.photo_url,
           "pro": !!+rawData.pro
         }
       }
     }
-
+    
     return userData;
   })
   .then((userData) => {
-    res.send(userData);
+    finalData = userData;
+    return db.getUserActivities(userData.data.id)
+  })
+  .then((rows) => {
+    return rows.map((row) => {
+      return row.act_name;
+    })
+  })
+  .then((activities) => {
+    finalData.data.attributes.favorite_activities = activities;
+    return finalData;
+  })
+  .then((data) => {
+    console.log(data);
+    res.send(data);
   });
 });
 
