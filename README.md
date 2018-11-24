@@ -33,7 +33,7 @@ To Retrieve data for a given user perform a GET request to the `users/{userID}` 
       email: 'tbecker@example.net',
       location: 'Fletachester, VA',
       date_joined: '1979-02-20',
-      favorite_activities: [Array],
+      favorite_activities: ['Hiking', 'Fishing', 'Hunting'],
       bio: 'Aut sequi dolore temporibus quia qui consequatur. Possimus non fugiat perspiciatis voluptas. Enim aut quia minus ipsam. Dolore corrupti et tenetur sit.',
       photo_url: 'http://lorempixel.com/640/480/',
       pro: true 
