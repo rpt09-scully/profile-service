@@ -21,24 +21,26 @@ Profile Service for 9 Trails
 To Retrieve data for a given user perform a GET request to the `users/{userID}` endpoint. Data will return int he format below
 
 ```
-{ 
-  data:
-  { 
-    type: 'users',
-    id: 22,
-    attributes:
-    { 
-      first_name: 'Joel',
-      last_name: 'Vandervort',
-      email: 'tbecker@example.net',
-      location: 'Fletachester, VA',
-      date_joined: '1979-02-20',
-      favorite_activities: ['Hiking', 'Fishing', 'Hunting'],
-      bio: 'Aut sequi dolore temporibus quia qui consequatur. Possimus non fugiat perspiciatis voluptas. Enim aut quia minus ipsam. Dolore corrupti et tenetur sit.',
-      photo_url: 'http://lorempixel.com/640/480/',
-      pro: true 
-    } 
-  } 
+{
+  "data": {
+    "type": "users",
+    "id": 22,
+    "attributes": {
+      "first_name": "Joel",
+      "last_name": "Vandervort",
+      "email": "tbecker@example.net",
+      "location": "Fletachester, VA",
+      "date_joined": "1979-02-20",
+      "favorite_activities": [
+        "Hiking",
+        "Fishing",
+        "Hunting"
+      ],
+      "bio": "Aut sequi dolore temporibus quia qui consequatur. Possimus non fugiat perspiciatis voluptas. Enim aut quia minus ipsam. Dolore corrupti et tenetur sit.",
+      "photo_url": "http://lorempixel.com/640/480/",
+      "pro": true
+    }
+  }
 }
 ```
 
