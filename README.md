@@ -20,7 +20,7 @@ Profile Service for 9 Trails
 
 To Retrieve data for a given user perform a GET request to the `users/{userID}` endpoint. Data will return int he format below
 
-`
+```
 { data:
    { type: 'users',
      id: 22,
@@ -34,7 +34,7 @@ To Retrieve data for a given user perform a GET request to the `users/{userID}` 
         bio: 'Aut sequi dolore temporibus quia qui consequatur. Possimus non fugiat perspiciatis voluptas. Enim aut quia minus ipsam. Dolore corrupti et tenetur sit.',
         photo_url: 'http://lorempixel.com/640/480/',
         pro: true } } }
-`
+```
 
 ## Requirements
 
