@@ -27,7 +27,7 @@ app.get('/user/:id', function (req, res) {
           "email": rawData.email,
           "location": rawData.location,
           "date_joined": rawData.date_joined.toJSON().substring(0,10),
-          "favorite_activities": [], // Need to pull real data
+          "favorite_activities": [],
           "bio": rawData.bio,
           "photo_url": rawData.photo_url,
           "pro": !!+rawData.pro
@@ -51,7 +51,6 @@ app.get('/user/:id', function (req, res) {
     return finalData;
   })
   .then((data) => {
-    console.log(data);
     res.send(data);
   });
 });
