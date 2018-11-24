@@ -20,7 +20,15 @@ export default class App extends Component {
         photo_url: 'http://lorempixel.com/640/480/',
         pro: true
     };
+
+    this.convertDate = this.convertDate.bind(this);
   }
+
+    convertDate() {
+        let date = new Date(this.state.date_joined +'Z');
+        return date.getMonth() + date.getFullYear();
+    }
+
     render() {
         return (
         <div id="profile-container">
@@ -31,6 +39,8 @@ export default class App extends Component {
                 <div id="profile-info">
                     <div id="profile-image-container">
                         <img src={this.state.photo_url} alt={this.state.full_name}/>
+                        <strong>Member Since</strong>
+                        <span>{this.convertDate()}</span>
                     </div>
                 </div>
             </div>
