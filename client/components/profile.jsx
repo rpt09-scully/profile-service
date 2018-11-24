@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 
 // MODEL https://www.alltrails.com/members/rpeh
 
