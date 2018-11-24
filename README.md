@@ -21,8 +21,10 @@ Profile Service for 9 Trails
 To Retrieve data for a given user perform a GET request to the `users/{userID}` endpoint. Data will return int he format below
 
 ```
-{ data:
-  { type: 'users',
+{ 
+  data:
+  { 
+    type: 'users',
     id: 22,
     attributes:
     { 
