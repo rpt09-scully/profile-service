@@ -11,7 +11,7 @@ export default class App extends Component {
         id: 22,
         first_name: 'Joel',
         last_name: 'Vandervort',
-        full_name: first_name + last_name,
+        full_name: '',
         email: 'tbecker@example.net',
         location: 'Fletachester, VA',
         date_joined: '1979-02-20',

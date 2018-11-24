@@ -1,3 +1,3 @@
-import Profile from './src/components/profile.jsx';
+import Profile from './components/profile.jsx';
 
 window.Profile = Profile;
