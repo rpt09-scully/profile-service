@@ -19,6 +19,7 @@ export default class App extends Component {
         bio: 'Aut sequi dolore temporibus quia qui consequatur. Possimus non fugiat perspiciatis voluptas. Enim aut quia minus ipsam. Dolore corrupti et tenetur sit.',
         photo_url: 'http://lorempixel.com/100/100/',
         pro: true
+        // Could still add Reputation and followers
     };
 
     this.convertDate = this.convertDate.bind(this);
@@ -36,7 +37,8 @@ export default class App extends Component {
     render() {
         return (
         <div id="profile-container">
-            <div id="profile-topbar">
+            {/* Possibly Add navigation topbar for other profile components */}
+            <div id="profile-subbar">
                 <h3>Profile</h3>
             </div>
             <div id="profile-main">
@@ -50,7 +52,8 @@ export default class App extends Component {
                         {/* <button>Follow</button> Followers not implemented yet */}
                     </div>
                     <div id="profile-right-content">
-                        <h2 id="profile-user-name">{this.state.first_name}</h2>
+                        <h2 id="profile-user-name">{this.state.full_name}</h2>
+                        {/* Still Need Pro/Not Pro */}
                         <h4 id="profile-user-location">{this.state.location}</h4>
                         <p id="profile-user-bio">{this.state.bio}</p>
                         <h4 id="profile-favorite-activities-title">Favorite Activities</h4>
