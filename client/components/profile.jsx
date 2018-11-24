@@ -17,7 +17,7 @@ export default class App extends Component {
         date_joined: '1979-02-20',
         favorite_activities: ['Hiking', 'Hunting', 'Fishing'],
         bio: 'Aut sequi dolore temporibus quia qui consequatur. Possimus non fugiat perspiciatis voluptas. Enim aut quia minus ipsam. Dolore corrupti et tenetur sit.',
-        photo_url: 'http://lorempixel.com/400/400/',
+        photo_url: 'http://lorempixel.com/100/100/',
         pro: true
     };
 
@@ -41,10 +41,13 @@ export default class App extends Component {
             </div>
             <div id="profile-main">
                 <div id="profile-info">
-                    <div id="profile-image-container">
-                        <img src={this.state.photo_url} alt={this.state.full_name}/>
+                    <div id="profile-left-content">
+                        <div id="profile-image-container">
+                            <img id="profile-image" src={this.state.photo_url} alt={this.state.full_name}/>
+                        </div>
                         <strong>Member Since</strong>
                         <span>{this.convertDate()}</span>
+                        {/* <button>Follow</button> Followers not implemented yet */}
                     </div>
                 </div>
             </div>
