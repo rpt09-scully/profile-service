@@ -49,6 +49,9 @@ export default class App extends Component {
                         <span>{this.convertDate()}</span>
                         {/* <button>Follow</button> Followers not implemented yet */}
                     </div>
+                    <div id="profile-right-content">
+                        
+                    </div>
                 </div>
             </div>
         </div>
