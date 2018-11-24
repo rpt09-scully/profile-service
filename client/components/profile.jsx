@@ -50,7 +50,13 @@ export default class App extends Component {
                         {/* <button>Follow</button> Followers not implemented yet */}
                     </div>
                     <div id="profile-right-content">
-                        
+                        <h2 id="profile-user-name">{this.state.first_name}</h2>
+                        <h4 id="profile-user-location">{this.state.location}</h4>
+                        <p id="profile-user-bio">{this.state.bio}</p>
+                        <h4 id="profile-favorite-activities-title">Favorite Activities</h4>
+                        <div id="profile-favorite-activities-tags">
+                            {/* Component for Tags Here */}
+                        </div>
                     </div>
                 </div>
             </div>
