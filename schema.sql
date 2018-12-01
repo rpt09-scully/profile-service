@@ -19,7 +19,22 @@ CREATE TABLE `profile_data` (
   PRIMARY KEY (`id`)
 ) 
 
+DROP TABLE IF EXISTS `activities`;
 
+CREATE TABLE `activities` (
+  id int NOT NULL AUTO_INCREMENT,
+  activity_name varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) 
+
+DROP TABLE IF EXISTS `activities_user`;
+
+CREATE TABLE `activities_user` (
+  id int NOT NULL AUTO_INCREMENT,
+  activity_name varchar(100) NOT NULL,
+  user_id int(9) unsigned NOT NULL,
+  PRIMARY KEY (`id`)
+) 
 
 
 /*  Execute this file from the command line by typing:
