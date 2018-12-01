@@ -34,7 +34,9 @@ To set up:
   $> cd profile-service
   # install dependencies
   $> npm install
+  $> npm install mysql
   # setup config.js file (for sql creds), cd to `database-mysql`
+  $> cd database-mysql
   $> cp config-example.js config.js
   # seed database `profile_db` (change credentials as needed)
   $> mysql -u root -p < schema.sql  
