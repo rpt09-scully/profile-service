@@ -23,24 +23,6 @@ CREATE TABLE `activities` (
 	PRIMARY KEY (`act_id`)
 );
 
-<<<<<<< HEAD
-DROP TABLE IF EXISTS `activities`;
-
-CREATE TABLE `activities` (
-  id int NOT NULL AUTO_INCREMENT,
-  activity_name varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) 
-
-DROP TABLE IF EXISTS `activities_user`;
-
-CREATE TABLE `activities_user` (
-  id int NOT NULL AUTO_INCREMENT,
-  activity_name varchar(100) NOT NULL,
-  user_id int(9) unsigned NOT NULL,
-  PRIMARY KEY (`id`)
-) 
-=======
 CREATE TABLE `prof_act` (
   `act_id` int(11) NOT NULL,
   `prof_id` int(11) NOT NULL,
@@ -148,7 +130,6 @@ INSERT INTO `activities` (`act_id`, `act_name`) VALUES (97, 'inventore');
 INSERT INTO `activities` (`act_id`, `act_name`) VALUES (98, 'quia');
 INSERT INTO `activities` (`act_id`, `act_name`) VALUES (99, 'omnis');
 INSERT INTO `activities` (`act_id`, `act_name`) VALUES (100, 'in');
->>>>>>> 5eff92d2ced7526b65e4395b12ad66f04cf2ef12
 
 
 INSERT INTO `profiles` (`prof_id`, `first_name`, `last_name`, `email`, `location`, `date_joined`, `bio`, `photo_url`, `pro`) VALUES (1, 'Isabella', 'Greenholt', 'kiana93@example.org', 'Sauerside, ID', '1982-08-05', 'Modi vel nulla consequatur consequatur veritatis enim tempore. Dolor architecto voluptatum tempora ut vel. Facere aut voluptatem ullam quia atque nesciunt.', 'http://lorempixel.com/640/480/', 1);
