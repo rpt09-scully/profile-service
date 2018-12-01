@@ -49,7 +49,6 @@ app.get('/user/:id', function (req, res) {
     return finalData;
   })
   .then((data) => {
-    console.log(data);
     res.send(data);
   });
 });
