@@ -23,7 +23,6 @@ const getUserActivities = (id) => {
 
 
 module.exports = {
-  connection,
   getUser,
   getUserActivities
 };
