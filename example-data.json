@@ -3,6 +3,7 @@
         "type": "users",
         "id": 22,
         "attributes": {
+<<<<<<< HEAD
             "first_name": "Joel",
             "last_name": "Vandervort",
             "email": "tbecker@example.net",
@@ -15,6 +16,16 @@
             ],
             "bio": "Aut sequi dolore temporibus quia qui consequatur. Possimus non fugiat perspiciatis voluptas. Enim aut quia minus ipsam. Dolore corrupti et tenetur sit.",
             "photo_url": "http://lorempixel.com/640/480/",
+=======
+            "first_name": "Matt",
+            "last_name": "Weber",
+            "email": "matt@feldmanweber.com",
+            "location": "Kenai, AK",
+            "date_joined": "2018-03-19",
+            "favorite_activities": ["Hunting", "Hiking", "Fishing"],
+            "bio": "Husband | Software Engineer | Serial Entrepreneur",
+            "photo_url": "https://avatars1.githubusercontent.com/u/18507767",
+>>>>>>> 5eff92d2ced7526b65e4395b12ad66f04cf2ef12
             "pro": true
         }
     }

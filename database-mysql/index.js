@@ -23,7 +23,10 @@ const getUserActivities = (id) => {
 
 
 module.exports = {
+<<<<<<< HEAD
   connection,
+=======
+>>>>>>> 5eff92d2ced7526b65e4395b12ad66f04cf2ef12
   getUser,
   getUserActivities
 };

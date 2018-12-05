@@ -26,8 +26,11 @@ CREATE TABLE `activities` (
 CREATE TABLE `prof_act` (
   `act_id` int(11) NOT NULL,
   `prof_id` int(11) NOT NULL,
+<<<<<<< HEAD
   KEY `prof_act_fk0` (`act_id`),
   KEY `prof_act_fk1` (`prof_id`),
+=======
+>>>>>>> 5eff92d2ced7526b65e4395b12ad66f04cf2ef12
   CONSTRAINT `prof_act_fk0` FOREIGN KEY (`act_id`) REFERENCES `activities` (`act_id`),
   CONSTRAINT `prof_act_fk1` FOREIGN KEY (`prof_id`) REFERENCES `profiles` (`prof_id`)
 );
