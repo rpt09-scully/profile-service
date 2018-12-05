@@ -57,7 +57,7 @@ export default class Profile extends Component {
                         <h4 id="profile-user-location">{this.state.location}</h4>
                         <p id="profile-user-bio">{this.state.bio}</p>
                         <h4 id="profile-favorite-activities-title">Favorite Activities</h4>
-                        <ActivitiesList />
+                        <ActivitiesList activities={this.state.favorite_activities} />
                     </div>
                 </div>
             </div>
