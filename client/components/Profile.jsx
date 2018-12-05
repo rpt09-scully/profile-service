@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import ActivitiesList from './ActivitiesList.jsx';
 
 // MODEL https://www.alltrails.com/members/rpeh
 
-export default class App extends Component {
+export default class Profile extends Component {
     constructor() {
     super();
 
@@ -56,9 +57,7 @@ export default class App extends Component {
                         <h4 id="profile-user-location">{this.state.location}</h4>
                         <p id="profile-user-bio">{this.state.bio}</p>
                         <h4 id="profile-favorite-activities-title">Favorite Activities</h4>
-                        <div id="profile-favorite-activities-tags">
-                            {/* Component for Tags Here */}
-                        </div>
+                        <ActivitiesList />
                     </div>
                 </div>
             </div>
