@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ActivitiesList from './ActivitiesList.jsx';
+import Pro from './Pro.jsx';
 
 // MODEL https://www.alltrails.com/members/rpeh
 
@@ -18,7 +19,7 @@ export default class Profile extends Component {
         favorite_activities: ['Hiking', 'Hunting', 'Fishing'],
         bio: 'Aut sequi dolore temporibus quia qui consequatur. Possimus non fugiat perspiciatis voluptas. Enim aut quia minus ipsam. Dolore corrupti et tenetur sit.',
         photo_url: 'http://lorempixel.com/100/100/',
-        pro: true
+        pro: false
         // Could still add Reputation and followers
     };
 
@@ -53,7 +54,7 @@ export default class Profile extends Component {
                     </div>
                     <div id="profile-right-content">
                         <h2 id="profile-user-name">{this.state.full_name}</h2>
-                        {/* Still Need Pro/Not Pro */}
+                        <Pro isPro={this.state.pro}/>
                         <h4 id="profile-user-location">{this.state.location}</h4>
                         <p id="profile-user-bio">{this.state.bio}</p>
                         <h4 id="profile-favorite-activities-title">Favorite Activities</h4>
