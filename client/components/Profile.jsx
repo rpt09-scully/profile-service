@@ -62,6 +62,7 @@ export default class App extends Component {
                     </div>
                 </div>
             </div>
+            {/* Component for Sidebar Here */}
         </div>
         )
     }
