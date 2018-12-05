@@ -18,11 +18,7 @@ Profile Service for 9 Trails
 
 ## Usage
 
-<<<<<<< HEAD
 To Retrieve data for a given user perform a GET request to the `users/{userID}` endpoint. Data will return int he format below
-=======
-> Coming Soon
->>>>>>> 5eff92d2ced7526b65e4395b12ad66f04cf2ef12
 
 ```
 {
@@ -48,50 +44,14 @@ To Retrieve data for a given user perform a GET request to the `users/{userID}` 
 }
 ```
 
-<<<<<<< HEAD
 ## Requirements
 
-=======
->>>>>>> 5eff92d2ced7526b65e4395b12ad66f04cf2ef12
 > Coming Soon
 
 ## Development
 
 
 To set up:
-<<<<<<< HEAD
-
-  ``` sh
-  # cd into directory
-  $> cd profile-service
-  # install dependencies
-  $> npm install
-  # setup config.js file (for sql creds)
-  $> cp config-example.js config.js
-  # seed database `profile_db` (change credentials as needed)
-  $> mysql -u root -p < schema.sql  
-  ```
-
-  Inside `config.js` place your SQL credentials (change if needed)
-  ``` 
-  module.exports = {
-    user: 'root', 
-
-    password: 'example', 
-
-    database: 'profiles_db'
-  };
-  ```
-
-  To execute:
-
-  ``` sh
-  $> npm run start
-  ```
-
-### Installing Dependencies
-
-=======
 
   ``` sh
   # cd into directory
@@ -123,6 +83,5 @@ To set up:
 
 ### Installing Dependencies
 
->>>>>>> 5eff92d2ced7526b65e4395b12ad66f04cf2ef12
 > Coming Soon
 
