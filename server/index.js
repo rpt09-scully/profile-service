@@ -1,8 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const db = require('../database-mysql');
-const exampleData = require('../example-data.json');
-
+const db = require('../database');
 
 const app = express();
 const PORT = 3002;
@@ -51,7 +49,6 @@ app.get('/user/:id', function (req, res) {
     return finalData;
   })
   .then((data) => {
-    console.log(data);
     res.send(data);
   });
 });
@@ -59,3 +56,5 @@ app.get('/user/:id', function (req, res) {
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
 });
+
+module.exports = app;
