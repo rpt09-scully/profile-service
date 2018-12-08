@@ -1,7 +1,7 @@
 {
     "data": {
         "type": "users",
-        "id": "1",
+        "id": 22,
         "attributes": {
             "first_name": "Matt",
             "last_name": "Weber",
