@@ -63,7 +63,7 @@ To set up:
   $> cd database
   $> cp config-example.js config.js
   # seed database `profile_db` (change credentials as needed)
-  $> mysql -u <username here> -p < schema.sql  
+  $> mysql -u <username here> -p < ../schema.sql  
   ```
 
   Inside `config.js` place your SQL credentials (change if needed)
