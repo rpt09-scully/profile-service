@@ -18,7 +18,7 @@ Profile Service for 9 Trails
 
 ## Usage
 
-To Retrieve data for a given user perform a GET request to the `users/{userID}` endpoint. Data will return int he format below
+To Retrieve data for a given user perform a GET request to the `users/{userID}` endpoint. Data will return in the format below
 
 ```
 {
