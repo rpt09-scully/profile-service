@@ -8,7 +8,7 @@ const PORT = 3002;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use(express.static(__dirname + '/../client/dist'));
+app.use(express.static(__dirname + '/../public/'));
 
 app.get('/user/:id', function (req, res) {
   let finalData;
@@ -25,7 +25,7 @@ app.get('/user/:id', function (req, res) {
           "email": rawData.email,
           "location": rawData.location,
           "date_joined": rawData.date_joined.toJSON().substring(0,10),
-          "favorite_activities": [], // Need to pull real data
+          "favorite_activities": [], 
           "bio": rawData.bio,
           "photo_url": rawData.photo_url,
           "pro": !!+rawData.pro
