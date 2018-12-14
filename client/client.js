@@ -1,3 +1,5 @@
 import Profile from './components/Profile.jsx';
 
-window.Profile = Profile;
+window.NT = window.NT || {};
+window.NT.ProfileService = {};
+window.NT.ProfileService.Profile = Profile;
