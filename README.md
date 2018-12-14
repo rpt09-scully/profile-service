@@ -18,7 +18,7 @@ Profile Service for 9 Trails
 
 ## Usage
 
-To Retrieve data for a given user perform a GET request to the `users/{userID}` endpoint. Data will return int he format below
+To Retrieve data for a given user perform a GET request to the `users/{userID}` endpoint. Data will return in the format below
 
 ```
 {
@@ -58,10 +58,12 @@ To set up:
   $> cd profile-service
   # install dependencies
   $> npm install
-  # setup config.js file (for sql creds), cd to `database-mysql`
+  $> npm install mysql
+  # setup config.js file (for sql creds), cd to `database`
+  $> cd database
   $> cp config-example.js config.js
   # seed database `profile_db` (change credentials as needed)
-  $> mysql -u root -p < schema.sql  
+  $> mysql -u <username here> -p < ../schema.sql  
   ```
 
   Inside `config.js` place your SQL credentials (change if needed)
