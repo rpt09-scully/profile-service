@@ -13,6 +13,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static(__dirname + '/../public/'));
 
+app.get('/:trailId(\\d+$)*?', function(req, res) {
+
+});
+
 app.get('/user/:id', function (req, res) {
   let finalData;
   db.getUser(req.params.id)
