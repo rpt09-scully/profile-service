@@ -36,16 +36,18 @@ export default class Profile extends Component {
     }
 
     componentDidMount() {
-        const id = () => {
+        const determineId = () => {
             if (window.location.pathname.length > 1) {
-                return window.location.pathname.substring(1)
+                return window.location.pathname.substring(1);
             }
             else {
                 return '1';
             }
         }
+        const id = determineId();
         fetch('http://localhost:3002/user/' + id)
             .then((res) => {
+                console.log(res);
                 return res.json();
             })
             .then((res) => {
