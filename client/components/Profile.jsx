@@ -47,7 +47,6 @@ export default class Profile extends Component {
         const id = determineId();
         fetch('http://localhost:3002/user/' + id)
             .then((res) => {
-                console.log(res);
                 return res.json();
             })
             .then((res) => {
