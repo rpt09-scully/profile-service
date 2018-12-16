@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('../database');
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
 const PORT = 3002;
@@ -13,8 +14,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static(__dirname + '/../public/'));
 
-app.get('/:trailId(\\d+$)*?', function(req, res) {
-
+app.get('/:trailId(\\d+$)*?', function (req, res) {
+  res.status(200).sendFile(path.resolve(__dirname + '/../public/index.html'));
 });
 
 app.get('/user/:id', function (req, res) {

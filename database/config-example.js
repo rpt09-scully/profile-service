@@ -1,7 +1,7 @@
 module.exports = {
-  user: 'YOUR_USERNAME_HERE', 
+  user: 'root',
 
-  password: 'YOUR_PASSWORD_HERE', 
+  password: '',
 
   database: 'profiles_db'
 };
