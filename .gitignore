@@ -1,6 +1,5 @@
 /database/config.js
 /node_modules/
-/.ebextensions/
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
