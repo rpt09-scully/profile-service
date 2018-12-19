@@ -69,7 +69,13 @@ To set up:
   ``` 
   DB_HOST=localhost
   DB_USER=root
-  DB_PASS=s1mpl3
+  DB_PASS=
+
+  RDS_DB_NAME=
+  RDS_HOSTNAME=
+  RDS_PASSWORD=
+  RDS_PORT=
+  RDS_USERNAME=
   ```
 
   To execute:
