@@ -5,9 +5,19 @@ const cors = require('cors');
 const path = require('path');
 
 const app = express();
-const PORT = 8081;
+
+const setPORT = () => {
+  if (process.env.NODE_ENV !== 'production') {
+    return 3002;
+  } else {
+    return 8081;
+  }
+}
+
+const PORT = setPORT();
 
 app.use(cors());
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
