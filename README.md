@@ -59,22 +59,17 @@ To set up:
   # install dependencies
   $> npm install
   $> npm install mysql
-  # setup config.js file (for sql creds), cd to `database`
-  $> cd database
-  $> cp config-example.js config.js
+  # setup .env file (for sql creds) using .envexample
+  $> cp .envexample .env
   # seed database `profile_db` (change credentials as needed)
   $> mysql -u <username here> -p < ../schema.sql  
   ```
 
-  Inside `config.js` place your SQL credentials (change if needed)
+  Inside `.env` place your SQL credentials (change if needed)
   ``` 
-  module.exports = {
-    user: 'root', 
-
-    password: 'example', 
-
-    database: 'profiles_db'
-  };
+  DB_HOST=localhost
+  DB_USER=root
+  DB_PASS=s1mpl3
   ```
 
   To execute:
