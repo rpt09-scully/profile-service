@@ -3,16 +3,9 @@ const bodyParser = require('body-parser');
 const db = require('../database');
 const cors = require('cors');
 const path = require('path');
-require('dotenv').config()
 
 const app = express();
 const PORT = 3002;
-
-db.connect({
-  host: process.env.DB_HOST,
-  username: process.env.DB_USER,
-  password: process.env.DB_PASS
-})
 
 app.use(cors());
 

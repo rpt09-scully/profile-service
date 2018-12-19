@@ -1,7 +1,13 @@
 const mysql = require('mysql');
-const mysqlConfig = require('./config.js');
+require('dotenv').config()
 
-const connection = mysql.createConnection(mysqlConfig);
+
+const connection = mysql.createConnection({
+  database: 'profiles_db',
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+});
 
 const getUser = (id) => {
   return new Promise((resolve, reject) => {
