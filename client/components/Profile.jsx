@@ -45,7 +45,14 @@ export default class Profile extends Component {
             }
         }
         const id = determineId();
-        fetch('http://localhost:3002/user/' + id)
+        const url = () => {
+            if (process.env.NODE_ENV !== 'production') {
+                return process.env.DEV_URL
+            } else {
+                return process.env.PRODUCTION_URL
+            }
+        }
+        fetch(url() + id)
             .then((res) => {
                 return res.json();
             })
