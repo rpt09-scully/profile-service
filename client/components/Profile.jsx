@@ -53,7 +53,7 @@ export default class Profile extends Component {
             }
         };
 
-        fetch(url())
+        fetch('http://profile-service.be6c6ztrma.us-west-2.elasticbeanstalk.com/user/' + determineId())
             .then((res) => {
                 return res.json();
             })
