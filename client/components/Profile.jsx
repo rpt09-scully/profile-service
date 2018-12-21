@@ -44,9 +44,15 @@ export default class Profile extends Component {
                 return '1';
             }
         }
-        let url = window.location.origin + '/user/' + determineId();
+        const url = () => {
+            if (window.location.origin === 'http://localhost:3002/') {
+                return 'http://localhost:3002/user/' + determineId();
+            } else {
+                return 'http://profile-service.be6c6ztrma.us-west-2.elasticbeanstalk.com/user/' + determineId();
+            }
+        };
 
-        fetch(url)
+        fetch(url())
             .then((res) => {
                 return res.json();
             })
