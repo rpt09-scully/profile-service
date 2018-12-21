@@ -44,20 +44,14 @@ export default class Profile extends Component {
                 return '1';
             }
         }
-        const id = determineId();
-        const url = () => {
-            if (process.env.NODE_ENV !== 'production') {
-                return process.env.DEV_URL
-            } else {
-                return process.env.PRODUCTION_URL
-            }
-        }
-        fetch(url() + id)
+        let url = window.location.origin + '/user/' + determineId();
+
+        fetch(url)
             .then((res) => {
+                console.log(res.body);
                 return res.json();
             })
             .then((res) => {
-                console.log(res.data);
                 this.setState({
                     id: res.id,
                     first_name: res.data.attributes.first_name,

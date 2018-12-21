@@ -76,9 +76,6 @@ To set up:
   RDS_PASSWORD=
   RDS_PORT=
   RDS_USERNAME=
-
-  PRODUCTION_URL=http://profile-service.be6c6ztrma.us-west-2.elasticbeanstalk.com/
-  DEV_URL=http://localhost:3002/
   ```
 
   To execute:
