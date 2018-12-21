@@ -48,7 +48,6 @@ export default class Profile extends Component {
 
         fetch(url)
             .then((res) => {
-                console.log(res.body);
                 return res.json();
             })
             .then((res) => {
