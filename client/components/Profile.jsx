@@ -76,14 +76,14 @@ export default class Profile extends Component {
 
     render() {
         return (
-            <div className={styles.test}>
+            <div className={styles.profileContainer}>
                 <div>
                     <h3>Profile</h3>
                 </div>
                 <div>
                     <div>
                         <div>
-                            <div>
+                            <div className={styles.profileImageContainer}>
                                 <img src={this.state.photo_url} alt={this.state.full_name} />
                             </div>
                             <strong>Member Since</strong>

@@ -1,7 +1,9 @@
-.test {
-    background-color: #202020;
-    padding: 12px;
-    border-radius: 2px;
-    width: 100px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.profileContainer {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #4f4c3e;
+}
+
+.profileImageContainer {
+    display: flex;
+    justify-content: center;
 }
