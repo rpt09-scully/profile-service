@@ -10,7 +10,8 @@
   "scripts": {
     "start": "node server/index.js",
     "react-dev": "webpack -d --watch",
-    "test": "jest"
+    "test": "jest",
+    "seed-db": "mysql -u root -p < schema.sql"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

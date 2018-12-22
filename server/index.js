@@ -3,11 +3,24 @@ const bodyParser = require('body-parser');
 const db = require('../database');
 const cors = require('cors');
 const path = require('path');
+require('dotenv').config()
 
 const app = express();
-const PORT = 3002;
+
+const setPORT = () => {
+  if (process.env.NODE_ENV !== 'production') {
+    return 3002;
+  } else {
+    return 8081;
+  }
+}
+
+const PORT = setPORT();
 
 app.use(cors());
+
+console.log(process.env.NODE_ENV);
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
