@@ -19,9 +19,6 @@ const PORT = setPORT();
 
 app.use(cors());
 
-console.log(process.env.NODE_ENV);
-
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ActivitiesList from './ActivitiesList.jsx';
 import Pro from './Pro.jsx';
+import styles from '../css/style.css'
 
 // MODEL https://www.alltrails.com/members/rpeh
 
@@ -75,27 +76,25 @@ export default class Profile extends Component {
 
     render() {
         return (
-            <div id="profile-container">
-                {/* Possibly Add navigation topbar for other profile components */}
-                <div id="profile-subbar">
+            <div className={styles.test}>
+                <div>
                     <h3>Profile</h3>
                 </div>
-                <div id="profile-main">
-                    <div id="profile-info">
-                        <div id="profile-left-content">
-                            <div id="profile-image-container">
-                                <img id="profile-image" src={this.state.photo_url} alt={this.state.full_name} />
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <img src={this.state.photo_url} alt={this.state.full_name} />
                             </div>
                             <strong>Member Since</strong>
                             <span>{this.convertDate()}</span>
-                            {/* <button>Follow</button> Followers not implemented yet */}
                         </div>
-                        <div id="profile-right-content">
-                            <h2 id="profile-user-name">{this.state.full_name}</h2>
+                        <div>
+                            <h2>{this.state.full_name}</h2>
                             <Pro isPro={this.state.pro} />
-                            <h4 id="profile-user-location">{this.state.location}</h4>
-                            <p id="profile-user-bio">{this.state.bio}</p>
-                            <h4 id="profile-favorite-activities-title">Favorite Activities</h4>
+                            <h4>{this.state.location}</h4>
+                            <p>{this.state.bio}</p>
+                            <h4>Favorite Activities</h4>
                             <ActivitiesList activities={this.state.favorite_activities} />
                         </div>
                     </div>
