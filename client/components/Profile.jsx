@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ActivitiesList from './ActivitiesList.jsx';
 import Pro from './Pro.jsx';
-import styles from '../css/style.css'
+import styles from '../css/style.css';
 
 // MODEL https://www.alltrails.com/members/rpeh
 
@@ -62,7 +62,7 @@ export default class Profile extends Component {
                     id: res.id,
                     first_name: res.data.attributes.first_name,
                     last_name: res.data.attributes.last_name,
-                    full_name: res.data.attributes.first_name + res.data.attributes.last_name,
+                    full_name: res.data.attributes.first_name + ' ' + res.data.attributes.last_name,
                     email: res.data.attributes.email,
                     location: res.data.attributes.location,
                     date_joined: res.data.attributes.date_joined,
@@ -78,23 +78,22 @@ export default class Profile extends Component {
         return (
             <div className={styles.profileContainer}>
                 <div>
-                    <h3>Profile</h3>
-                </div>
-                <div>
                     <div>
-                        <div>
-                            <div className={styles.profileImageContainer}>
-                                <img src={this.state.photo_url} alt={this.state.full_name} />
+                        <div className={styles.profileImageContainer}>
+                            <div>
+                                <img className={styles.profileImage} src={this.state.photo_url} alt={this.state.full_name} />
                             </div>
                             <strong>Member Since</strong>
                             <span>{this.convertDate()}</span>
                         </div>
-                        <div>
+                        <div className={styles.profileName}>
                             <h2>{this.state.full_name}</h2>
                             <Pro isPro={this.state.pro} />
-                            <h4>{this.state.location}</h4>
-                            <p>{this.state.bio}</p>
-                            <h4>Favorite Activities</h4>
+                        </div>
+                        <div>
+                            <h4 className={styles.location}>{this.state.location}</h4>
+                            <p className={styles.bio}>{this.state.bio}</p>
+                            <h4 className={styles.favoriteActivities}>Favorite Activities</h4>
                             <ActivitiesList activities={this.state.favorite_activities} />
                         </div>
                     </div>

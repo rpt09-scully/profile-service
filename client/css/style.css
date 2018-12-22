@@ -1,9 +1,83 @@
 .profileContainer {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #4f4c3e;
+    padding: 25px;
 }
 
 .profileImageContainer {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.profileImage {
+    min-height: 250px;
+    margin-bottom: 10px;
+}
+
+.profileName {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.profileName h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.profileName div {
+    color: #fff;
+    margin-left: 15px;
+    border: 5px solid #E9501E;
+    background-color: #E9501E;
+    padding: 1px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.none {
+    display: none;
+}
+
+.location {
+    border-bottom: 1px solid #c6c2b5;
+    color: #8d8a7c;
+    font-size: 14px;
+    font-style: italic;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.activitiesTags {
+    background-color: #219ad8;
+    color: #FFF;
+    padding: 4px 7px;
+    margin: 0 2px 4px;
+    height: 18px;
+    line-height: 0.9;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.activitiesTagsList {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.favoriteActivities {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.bio {
+    font-size: 14px;
+    margin: 12px;
 }
