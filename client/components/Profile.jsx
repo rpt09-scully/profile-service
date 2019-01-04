@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ActivitiesList from './ActivitiesList.jsx';
 import Pro from './Pro.jsx';
+import styles from '../css/style.css';
 
 // MODEL https://www.alltrails.com/members/rpeh
 
@@ -61,7 +62,7 @@ export default class Profile extends Component {
                     id: res.id,
                     first_name: res.data.attributes.first_name,
                     last_name: res.data.attributes.last_name,
-                    full_name: res.data.attributes.first_name + res.data.attributes.last_name,
+                    full_name: res.data.attributes.first_name + ' ' + res.data.attributes.last_name,
                     email: res.data.attributes.email,
                     location: res.data.attributes.location,
                     date_joined: res.data.attributes.date_joined,
@@ -75,27 +76,24 @@ export default class Profile extends Component {
 
     render() {
         return (
-            <div id="profile-container">
-                {/* Possibly Add navigation topbar for other profile components */}
-                <div id="profile-subbar">
-                    <h3>Profile</h3>
-                </div>
-                <div id="profile-main">
-                    <div id="profile-info">
-                        <div id="profile-left-content">
-                            <div id="profile-image-container">
-                                <img id="profile-image" src={this.state.photo_url} alt={this.state.full_name} />
+            <div className={styles.profileContainer}>
+                <div>
+                    <div>
+                        <div className={styles.profileImageContainer}>
+                            <div>
+                                <img className={styles.profileImage} src={this.state.photo_url} alt={this.state.full_name} />
                             </div>
                             <strong>Member Since</strong>
                             <span>{this.convertDate()}</span>
-                            {/* <button>Follow</button> Followers not implemented yet */}
                         </div>
-                        <div id="profile-right-content">
-                            <h2 id="profile-user-name">{this.state.full_name}</h2>
+                        <div className={styles.profileName}>
+                            <h2>{this.state.full_name}</h2>
                             <Pro isPro={this.state.pro} />
-                            <h4 id="profile-user-location">{this.state.location}</h4>
-                            <p id="profile-user-bio">{this.state.bio}</p>
-                            <h4 id="profile-favorite-activities-title">Favorite Activities</h4>
+                        </div>
+                        <div>
+                            <h4 className={styles.location}>{this.state.location}</h4>
+                            <p className={styles.bio}>{this.state.bio}</p>
+                            <h4 className={styles.favoriteActivities}>Favorite Activities</h4>
                             <ActivitiesList activities={this.state.favorite_activities} />
                         </div>
                     </div>

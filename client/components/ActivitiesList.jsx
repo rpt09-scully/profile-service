@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import styles from '../css/style.css';
 
 function ActivitiesList(props) {
   const activitiesList = props.activities;
   const activitiesTags = activitiesList.map((activity) => {
-    return <div key={activity} className="profile-activity-tag">{activity}</div>
+    return <div key={activity} className={styles.activitiesTags}>{activity}</div>
   });
   console.log(activitiesTags);
   return (
-    <div id="profile-favorite-activities-tags">{activitiesTags}</div>
+    <div className={styles.activitiesTagList}>{activitiesTags}</div>
   );
 }
 

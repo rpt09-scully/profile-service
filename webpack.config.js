@@ -5,16 +5,24 @@ module.exports = {
     context: __dirname + '/client/',
     entry: './client.js',
     module: {
-        loaders: [
+        rules: [
             {
-                test: /\.jsx?$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['react', 'es2015', 'env']
-                },
+                use: ['babel-loader']
             },
-        ],
+            {
+                test: /\.(css)$/,
+                use: ['style-loader', 
+                {
+                    loader: 'css-loader',
+                    query: {
+                        modules: true,
+                        localIdentName: '[name]__[local]___[hash:base64:5]'
+                    }
+                }]
+            }
+        ]
     },
     output: {
         path: __dirname + '/public',
